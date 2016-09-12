@@ -2649,6 +2649,14 @@ dismissCompletionHandler:(void(^)())dismissCompletionHandler
 
         if (setupHandler) setupHandler(_imagePickerController);
 
+
+         //必须加上这一句，否则可能会导致在关闭弹出窗口的时候状态栏出现黑色（原因可能是修改了全局导航栏背景色）
+         if ([[[UIDevice currentDevice] systemVersion] floatValue]>=8.0) {
+             _imagePickerController.modalPresentationStyle=UIModalPresentationOverCurrentContext;
+         }else{
+             _imagePickerController.modalPresentationStyle=UIModalPresentationCurrentContext;
+         }
+
         [viewController presentViewController:_imagePickerController animated:animated completion:presentCompletionHandler];
     }
 

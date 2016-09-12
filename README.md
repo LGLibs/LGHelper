@@ -1,12 +1,14 @@
+本项目由 Friend-LGA/LGHelper fork 而来，又根据自己的需求增加了一些宏定义，并且没有合并到 Friend-LGA/LGHelper的项目当中。
+
 # LGHelper
 
-iOS helper contains a lot of useful macrosses, methods and hints for every day.
+iOS helper 包含了很多有用的宏和方法
 
-## Installation
+## 安装
 
 ### With source code
 
-[Download repository](https://github.com/Friend-LGA/LGHelper/archive/master.zip), then add [LGHelper directory](https://github.com/Friend-LGA/LGHelper/blob/master/LGHelper/) to your project.
+[Download repository](https://github.com/smartdj/LGHelper/archive/master.zip), then add [LGHelper directory](https://github.com/smartdj/LGHelper/blob/master/LGHelper/) to your project.
 
 ### With CocoaPods
 
@@ -15,7 +17,7 @@ CocoaPods is a dependency manager for Objective-C, which automates and simplifie
 #### Podfile
 ```ruby
 platform :ios, '6.0'
-pod 'LGHelper', '~> 1.1.0'
+pod 'LGHelper', :git => 'https://github.com/smartdj/LGHelper.git'
 ```
 
 ### With Carthage
@@ -24,7 +26,7 @@ Carthage is a lightweight dependency manager for Swift and Objective-C. It lever
 
 #### Cartfile
 ```
-github "Friend-LGA/LGHelper" ~> 1.1.0
+github "smartdj/LGHelper" ~> 1.1.0
 ```
 
 ## Usage
@@ -37,8 +39,8 @@ In the source files where you need to use the library, import the header file:
 
 ### More
 
-For more details see [LGHelper.h](https://github.com/Friend-LGA/LGHelper/blob/master/LGHelper/LGHelper.h)
+For more details see [LGHelper.h](https://github.com/smartdj/LGHelper/blob/master/LGHelper/LGHelper.h)
 
 ## License
 
-LGHelper is released under the MIT license. See [LICENSE](https://raw.githubusercontent.com/Friend-LGA/LGHelper/master/LICENSE) for details.
+LGHelper is released under the MIT license. See [LICENSE](https://raw.githubusercontent.com/smartdj/LGHelper/master/LICENSE) for details.

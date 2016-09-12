@@ -52,6 +52,13 @@
 #define kDeviceIsPad    (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define kDeviceIsPhone  (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
+#define kiPhone5ScreenWidth 320
+#define kiPhone5ScreenHeight 568
+#define kiPhone6ScreenWidth 375
+#define kiPhone6ScreenHeight 667
+#define kiPhone6PlusScreenWidth 414
+#define kiPhone6PlusScreenHeight 736
+
 #define kDeviceIsPhoneSmallerOrEqual35 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && MAX(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height) <= 480.0)
 #define kDeviceIsPhoneSmallerOrEqual40 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && MAX(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height) <= 568.0)
 #define kDeviceIsPhoneSmallerOrEqual47 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone && MAX(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height) <= 667.0)
@@ -183,7 +190,7 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 #define kNavBarHeight           44.f //self.navigationController.navigationBar.frame.size.height
 #define kStatusBarHeight        20.f //[UIApplication sharedApplication].statusBarFrame.size.height
 #define kStatusAndNavBarsHeight 64.f //([UIApplication sharedApplication].statusBarFrame.size.height+self.navigationController.navigationBar.frame.size.height)
-
+#define kTabBarHeight   kSystemVersion >= 8.0 ? 49 : kSystemVersion >= 7.0 ? 56 : kSystemVersion >= 6.0 ? 49 : 0
 // --------------------------------------------------
 
 #pragma mark - Aspects
@@ -373,10 +380,12 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 #import <UIKit/UIKit.h>
 
 /** Need to send email and sms */
-@import MessageUI;
+//@import MessageUI;
+#import <MessageUI/MessageUI.h>
 
 /** Need to open addresses and coorinates on map */
-@import MapKit;
+//@import MapKit;
+#import <MapKit/MapKit.h>
 
 typedef NS_ENUM(NSUInteger, LGImageScalingMode)
 {
