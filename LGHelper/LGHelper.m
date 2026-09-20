@@ -1,40 +1,20 @@
 //
-//  LGHelper.m
-//  LGHelper
+// LGHelper.m
+// LGHelper
+//
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
+//
+
+//
+// GZIP
+// Copyright (c) 2012 Charcoal Design
+// https://github.com/nicklockwood/GZIP
 //
 //
-//  The MIT License (MIT)
-//
-//  Copyright (c) 2015 Grigory Lutkov <Friend.LGA@gmail.com>
-//  (https://github.com/Friend-LGA/LGHelper)
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in all
-//  copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//  SOFTWARE.
-//
-//
-//  GZIP
-//  Copyright (c) 2012 Charcoal Design
-//  https://github.com/nicklockwood/GZIP
-//
-//
-//  Image with mask, color at pixel
-//  Copyright (c) 2009 Ole Begemann
-//  https://github.com/ole/OBShapedButton
+// Image with mask, color at pixel
+// Copyright (c) 2009 Ole Begemann
+// https://github.com/ole/OBShapedButton
 //
 
 #import "LGHelper.h"
@@ -808,14 +788,14 @@ static NSUInteger const kLGHelperGZIPChunkSize = 16384;
 + (void)keyboardNotificationsAddToTarget:(id)target selector:(SEL)selector
 {
     [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:UIKeyboardWillShowNotification object:nil];
-    //    [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:UIKeyboardWillChangeFrameNotification object:nil];
+    //   [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:UIKeyboardWillHideNotification object:nil];
 }
 
 + (void)keyboardNotificationsRemoveFromTarget:(id)target selector:(SEL)selector
 {
     [[NSNotificationCenter defaultCenter] removeObserver:target name:UIKeyboardWillShowNotification object:nil];
-    //    [[NSNotificationCenter defaultCenter] removeObserver:target name:UIKeyboardWillChangeFrameNotification object:nil];
+    //   [[NSNotificationCenter defaultCenter] removeObserver:target name:UIKeyboardWillChangeFrameNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:target name:UIKeyboardWillHideNotification object:nil];
 }
 
@@ -2811,102 +2791,102 @@ dismissCompletionHandler:(void(^)())dismissCompletionHandler
 
 //+ (Reachability *)reachabilityAddObserver:(id)target selector:(SEL)selector
 //{
-//    Reachability *reachability = [Reachability reachabilityForInternetConnection];
-//    [reachability startNotifier];
-//    [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:kReachabilityChangedNotification object:reachability];
+//   Reachability *reachability = [Reachability reachabilityForInternetConnection];
+//   [reachability startNotifier];
+//   [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:kReachabilityChangedNotification object:reachability];
 //
-//    return reachability;
+//   return reachability;
 //}
 //
 //+ (Reachability *)reachabilityForHostName:(NSString *)hostName addObserver:(id)target selector:(SEL)selector
 //{
-//    Reachability *reachability = [Reachability reachabilityWithHostName:hostName];
-//    [reachability startNotifier];
-//    [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:kReachabilityChangedNotification object:reachability];
+//   Reachability *reachability = [Reachability reachabilityWithHostName:hostName];
+//   [reachability startNotifier];
+//   [[NSNotificationCenter defaultCenter] addObserver:target selector:selector name:kReachabilityChangedNotification object:reachability];
 //
-//    return reachability;
+//   return reachability;
 //}
 //
 //+ (void)reachability:(Reachability *)reachability removeObserver:(id)target
 //{
-//    [reachability stopNotifier];
-//    [[NSNotificationCenter defaultCenter] removeObserver:target name:kReachabilityChangedNotification object:reachability];
+//   [reachability stopNotifier];
+//   [[NSNotificationCenter defaultCenter] removeObserver:target name:kReachabilityChangedNotification object:reachability];
 //}
 //
 //+ (NetworkStatus)reachabilityStatus
 //{
-//    return [[Reachability reachabilityForInternetConnection] currentReachabilityStatus];
+//   return [[Reachability reachabilityForInternetConnection] currentReachabilityStatus];
 //}
 //
 //+ (NetworkStatus)reachabilityStatusForHostName:(NSString *)hostName
 //{
-//    return [[Reachability reachabilityWithHostName:hostName] currentReachabilityStatus];
+//   return [[Reachability reachabilityWithHostName:hostName] currentReachabilityStatus];
 //}
 
 #pragma mark - MWPhotoBrowser
 
 //- (void)photoBrowserShow
 //{
-//    MWPhotoBrowser *photoBrowser = [[MWPhotoBrowser alloc] initWithDelegate:self];
-//    photoBrowser.displayActionButton = YES;     // Show action button to allow sharing, copying, etc (defaults to YES)
-//    photoBrowser.displayNavArrows = YES;        // Whether to display left and right nav arrows on toolbar (defaults to NO)
-//    photoBrowser.displaySelectionButtons = NO;  // Whether selection buttons are shown on each image (defaults to NO)
-//    photoBrowser.zoomPhotosToFill = YES;        // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
-//    photoBrowser.alwaysShowControls = NO;       // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
-//    photoBrowser.enableGrid = NO;               // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
-//    photoBrowser.startOnGrid = NO;              // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
-//    photoBrowser.enableSwipeToDismiss = NO;
-//    photoBrowser.currentPhotoIndex = 0;
+//   MWPhotoBrowser *photoBrowser = [[MWPhotoBrowser alloc] initWithDelegate:self];
+//   photoBrowser.displayActionButton = YES;     // Show action button to allow sharing, copying, etc (defaults to YES)
+//   photoBrowser.displayNavArrows = YES;        // Whether to display left and right nav arrows on toolbar (defaults to NO)
+//   photoBrowser.displaySelectionButtons = NO;  // Whether selection buttons are shown on each image (defaults to NO)
+//   photoBrowser.zoomPhotosToFill = YES;        // Images that almost fill the screen will be initially zoomed to fill (defaults to YES)
+//   photoBrowser.alwaysShowControls = NO;       // Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full (defaults to NO)
+//   photoBrowser.enableGrid = NO;               // Whether to allow the viewing of all the photo thumbnails on a grid (defaults to YES)
+//   photoBrowser.startOnGrid = NO;              // Whether to start on the grid of thumbnails instead of the first photo (defaults to NO)
+//   photoBrowser.enableSwipeToDismiss = NO;
+//   photoBrowser.currentPhotoIndex = 0;
 //
-//    for (NSUInteger i=0; i<someNumber; i++)
-//    {
-//        MWPhoto *photo = [MWPhoto photoWithURL:PhotoURL];
-//        photo.caption = Description;
+//   for (NSUInteger i=0; i<someNumber; i++)
+//   {
+//       MWPhoto *photo = [MWPhoto photoWithURL:PhotoURL];
+//       photo.caption = Description;
 //
-//        [_photosArray addObject:photo];
-//    }
+//       [_photosArray addObject:photo];
+//   }
 //
-//    UINavigationController *photoNavController = [[UINavigationController alloc] initWithRootViewController:photoBrowser];
-//    [self.navigationController presentViewController:photoNavController animated:YES completion:nil];
+//   UINavigationController *photoNavController = [[UINavigationController alloc] initWithRootViewController:photoBrowser];
+//   [self.navigationController presentViewController:photoNavController animated:YES completion:nil];
 //}
 
 #pragma mark Delegate
 
 //- (NSUInteger)numberOfPhotosInPhotoBrowser:(MWPhotoBrowser *)photoBrowser
 //{
-//    return _photosArray.count;
+//   return _photosArray.count;
 //}
 //
 //- (id<MWPhoto>)photoBrowser:(MWPhotoBrowser *)photoBrowser photoAtIndex:(NSUInteger)index
 //{
-//    if (index < _photosArray.count)
-//        return _photosArray[index];
+//   if (index < _photosArray.count)
+//       return _photosArray[index];
 //
-//    return nil;
+//   return nil;
 //}
 
 #pragma mark - Processor
 
 //unsigned int countCores()
 //{
-//    host_basic_info_data_t hostInfo;
-//    mach_msg_type_number_t infoCount;
+//   host_basic_info_data_t hostInfo;
+//   mach_msg_type_number_t infoCount;
 //
-//    infoCount = HOST_BASIC_INFO_COUNT;
-//    host_info(mach_host_self(), HOST_BASIC_INFO, (host_info_t)&hostInfo, &infoCount);
+//   infoCount = HOST_BASIC_INFO_COUNT;
+//   host_info(mach_host_self(), HOST_BASIC_INFO, (host_info_t)&hostInfo, &infoCount);
 //
-//    return (unsigned int)(hostInfo.max_cpus);
+//   return (unsigned int)(hostInfo.max_cpus);
 //}
 //
 //unsigned int countCores()
 //{
-//    size_t len;
-//    unsigned int ncpu;
-//    
-//    len = sizeof(ncpu);
-//    sysctlbyname ("hw.ncpu",&ncpu,&len,NULL,0);
-//    
-//    return ncpu;
+//   size_t len;
+//   unsigned int ncpu;
+//
+//   len = sizeof(ncpu);
+//   sysctlbyname ("hw.ncpu",&ncpu,&len,NULL,0);
+//
+//   return ncpu;
 //}
 
 @end

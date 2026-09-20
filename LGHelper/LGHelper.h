@@ -1,42 +1,21 @@
 //
-//  LGHelper.h
-//  LGHelper
+// LGHelper.h
+// LGHelper
 //
-//
-//  The MIT License (MIT)
-//
-//  Copyright (c) 2015 Grigory Lutkov <Friend.LGA@gmail.com>
-//  (https://github.com/Friend-LGA/LGHelper)
-//
-//  Permission is hereby granted, free of charge, to any person obtaining a copy
-//  of this software and associated documentation files (the "Software"), to deal
-//  in the Software without restriction, including without limitation the rights
-//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//  copies of the Software, and to permit persons to whom the Software is
-//  furnished to do so, subject to the following conditions:
-//
-//  The above copyright notice and this permission notice shall be included in all
-//  copies or substantial portions of the Software.
-//
-//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//  SOFTWARE.
-//
-//
-//  GZIP
-//  Copyright (c) 2012 Charcoal Design
-//  https://github.com/nicklockwood/GZIP
-//
-//
-//  Image with mask, color at pixel
-//  Copyright (c) 2009 Ole Begemann
-//  https://github.com/ole/OBShapedButton
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2015 Grigorii Lutkov <grigorii@lutkov.dev>
 //
 
+//
+// GZIP
+// Copyright (c) 2012 Charcoal Design
+// https://github.com/nicklockwood/GZIP
+//
+//
+// Image with mask, color at pixel
+// Copyright (c) 2009 Ole Begemann
+// https://github.com/ole/OBShapedButton
+//
 #pragma mark - Debug
 
 #if DEBUG
@@ -292,15 +271,15 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 
 // + (instancetype)sharedManager
 // {
-//     static dispatch_once_t once;
-//     static id sharedManager;
+//    static dispatch_once_t once;
+//    static id sharedManager;
 //
-//     dispatch_once(&once, ^(void)
-//                   {
-//                       sharedManager = [super new];
-//                   });
+//    dispatch_once(&once, ^(void)
+//                  {
+//                      sharedManager = [super new];
+//                  });
 //
-//     return sharedManager;
+//    return sharedManager;
 // }
 
 #pragma mark Add @property to category
@@ -309,26 +288,26 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 
 // - (void)setObject:(Class *)object
 // {
-//     objc_setAssociatedObject(self, @selector(object), object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//    objc_setAssociatedObject(self, @selector(object), object, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 // }
 
 // - (Class *)object
 // {
-//     return objc_getAssociatedObject(self, @selector(object));
+//    return objc_getAssociatedObject(self, @selector(object));
 // }
 
 #pragma mark UITableView alphabet scroll indicator
 
 // - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 // {
-//     return @[@"a", @"b", @"c"];
+//    return @[@"a", @"b", @"c"];
 // }
 
 #pragma mark Warnings
 
 // #pragma GCC diagnostic push
 // #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-//     place here some warning, needs to be hidden
+//    place here some warning, needs to be hidden
 // #pragma GCC diagnostic pop
 
 #pragma mark System Version
@@ -348,11 +327,11 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 
 // if ((button.state & (UIControlStateSelected|UIControlStateHighlighted)) == (UIControlStateSelected|UIControlStateHighlighted))
 // {
-//     // return YES;
+//    // return YES;
 // }
 // else
 // {
-//     // return NO;
+//    // return NO;
 // }
 
 #pragma mark - Attributes
@@ -366,7 +345,7 @@ else { dispatch_async(dispatch_get_main_queue(), block); }\
 // self.extendedLayoutIncludesOpaqueBars = YES;
 //
 // if (kSystemVersion < 7.0)
-//     self.wantsFullScreenLayout = YES;
+//    self.wantsFullScreenLayout = YES;
 
 #pragma mark - Interface
 
